@@ -6,7 +6,7 @@ using UnityEngine;
 namespace DIALOGUE {
     public class DialogueParser
     {
-        private const string commandRegexPattern = "\\w*[^\\s]\\(";
+        private const string commandRegexPattern = @"[\w\[\]]*[^\s]\(";
         public static DIALOGUE_LINE Parse(string rawLine)
         {
             Debug.Log($"Parsing line - '{rawLine}'");
@@ -47,14 +47,18 @@ namespace DIALOGUE {
 
             // Identify command pattern
             Regex commandRegex = new Regex(commandRegexPattern);
-            Match match = commandRegex.Match(rawLine);
+            MatchCollection matches = commandRegex.Matches(rawLine);
             int commandStart = -1;
-            if(match.Success)
+            foreach(Match match in matches)
             {
-                commandStart = match.Index;
-                if(dialogueStart == -1 && dialogueEnd == -1)
-                    return ("", "", rawLine.Trim());
+                if(match.Index < dialogueStart || match.Index > dialogueEnd)
+                {
+                    commandStart = match.Index;
+                    break;
+                }
             }
+            if (commandStart != -1 && (dialogueStart == -1 && dialogueEnd == -1))
+                return("", "", rawLine.Trim());
 
             if(dialogueStart != -1 && dialogueEnd != -1 && (commandStart == -1 || commandStart > dialogueEnd))
             {
@@ -67,7 +71,7 @@ namespace DIALOGUE {
             else if (commandStart != -1 && dialogueStart > commandStart)
                 commands = rawLine;
             else
-                speaker = rawLine;
+                dialogue = rawLine;
             return (speaker, dialogue, commands);
         }
     }
