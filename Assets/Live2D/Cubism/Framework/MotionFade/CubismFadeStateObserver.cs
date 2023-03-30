@@ -208,7 +208,6 @@ namespace Live2D.Cubism.Framework.MotionFade
                     {
                         continue;
                     }
-
                     motionIndex = j;
                     break;
                 }
@@ -220,6 +219,7 @@ namespace Live2D.Cubism.Framework.MotionFade
                 playingMotion.Speed = 1.0f;
                 playingMotion.StartTime = Time.time;
                 playingMotion.FadeInStartTime = Time.time;
+
                 playingMotion.EndTime = (playingMotion.Motion.MotionLength <= 0)
                                         ? -1
                                         : playingMotion.StartTime + playingMotion.Motion.MotionLength;

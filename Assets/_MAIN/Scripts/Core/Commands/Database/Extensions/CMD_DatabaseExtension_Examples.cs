@@ -26,10 +26,20 @@ public class CMD_DatabaseExtension_Examples : CMD_DatabaseExtension
         database.AddCommand("process_mp", new Func<string[], IEnumerator>(MultiLineProcess));
 
         // Special Example
-        database.AddCommand("moveCharDemo", new Func<string, IEnumerator>(MoveCharacter));
+       // database.AddCommand("moveCharDemo", new Func<string, IEnumerator>(MoveCharacter));
 
+        // Multiple choice function
+          database.AddCommand("show_choices", new Action<string[]>(ShowChoices));
    } 
 
+     private static void ShowChoices(string[] choices)
+     {
+          string title = choices[0];
+          List<string> arguments = new List<string>();
+          for(int i = 1; i < choices.Length; i++)
+               arguments.Add(choices[i]);
+          ChoiceScreen.Show(title, arguments.ToArray());
+     }
    private static void PrintDefaultMessage()
    {
         Debug.Log("Printing a default message to console.");
@@ -76,7 +86,7 @@ public class CMD_DatabaseExtension_Examples : CMD_DatabaseExtension
         }
    }
 
-   private static IEnumerator MoveCharacter(string direction) 
+   /*private static IEnumerator MoveCharacter(string direction) 
    {
         bool left = direction.ToLower() == "left";
 
@@ -99,6 +109,6 @@ public class CMD_DatabaseExtension_Examples : CMD_DatabaseExtension
             yield return null;
         }
 
-   }
+   }*/
 }
 }

@@ -1,0 +1,47 @@
+Protagonist: "*Shake* {wa 2} *Shake* *shake*"
+
+"…"
+
+???: "Please, wake up. {wa 1} In approximately 10.5 minutes, your body will shut down due to hypothermia."
+
+Protagonist: "*Shake* {wa 2} …Ugh. {a} What i-is it?"
+
+narrator "A short, grey skinned being stands before your eyes. They are lending you a hand."
+
+???: "Here, take my hand. Your legs are probably shaky. {a} I won’t let you fall."
+
+narrator "You observe the stranger’s hand. You are still confused and scared, but you reluctantly take it."
+
+narrator "They help you stand."
+
+???: "Heave-ho! {wa 2} Please hold on to me."
+
+"My model name is Medbot-06. {a} I am a specialised medical assistance android. I will be able to help you."
+
+Medbot-6: "Please follow me."
+
+Protagonist: "W-wait! Why should I follow you? I don’t understand anything. Everything is covered in snow, I-I don’t know where I am-"
+
+"The last thing I remember is going to the beach..."
+
+Medbot-6: "Statistically impossible. Beaches do not exist anymore, since all sea water has become inhabitable."
+
+Protagonist: "Total absence of water?! {wa 2} What the hell happened? And what day is it?!" 
+
+Medbot-6: "I am not equipped to answer such questions. {wa 1} ...I have no internal timer. {a} We are in the province of Valentia, and as far as I could detect, I have been the only living being around here for the last 50 years."
+
+Narrator "You fall down again, too shocked to properly process the information. The world around you suddenly becomes blurry and dark." 
+
+You wake up hours later, in a cozy, warm house.
+
+Protagonist: "Hng..."
+
+Medbot-6: "Good, you are awake again! {a} ...How are you feeling? I can detect that your body temperature is precisely 36.3 Celsius degrees. However, your blood sugar is kinda low. {wa 1} ...Would you like a cookie?"
+
+Narrator "The grey-skinned stranger holds a delicious-looking chocolate cookie in their gloved hand." show_choices("Will you take it?" "Take it." "Look at the stranger." "Refuse.")
+
+
+
+
+
+
