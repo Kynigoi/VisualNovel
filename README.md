@@ -16,5 +16,5 @@ Sonia Di Nicoli
 * How to import assets from Live2D and animate them.
 
 ## Acknowledgments
-https://learn.unity.com
-https://www.youtube.com/playlist?list=PLGSox0FgA5B58Ki4t4VqAPDycEpmkBd0i
+* https://learn.unity.com
+* https://www.youtube.com/playlist?list=PLGSox0FgA5B58Ki4t4VqAPDycEpmkBd0i
